@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FHk-p9-32b">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,20 +11,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VoicePerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordViewController" customModule="VoicePerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3p-Ie-Buc" userLabel="Record Button">
-                                <rect key="frame" x="110" y="266" width="155" height="155"/>
-                                <state key="normal" image="Record"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to start recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adb-Tb-d0V">
-                                <rect key="frame" x="105" y="90" width="165" height="21"/>
+                                <rect key="frame" x="105" y="114" width="165" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="adb-Tb-d0V" secondAttribute="height" multiplier="55:7" id="8si-Nq-bsz"/>
                                 </constraints>
@@ -33,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Perfect" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NV9-rD-W2K">
-                                <rect key="frame" x="105" y="43" width="166" height="31"/>
+                                <rect key="frame" x="122.5" y="74" width="131" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NV9-rD-W2K" secondAttribute="height" multiplier="129:26" constant="12.192307692307679" id="48S-MO-5e6"/>
                                 </constraints>
@@ -41,26 +37,84 @@
                                 <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3p-Ie-Buc" userLabel="Record Button">
+                                <rect key="frame" x="111" y="299" width="155" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="PMd-af-ILn"/>
+                                    <constraint firstAttribute="width" constant="155" id="ZVz-dR-ri3"/>
+                                    <constraint firstAttribute="width" secondItem="h3p-Ie-Buc" secondAttribute="height" multiplier="1:1" id="f0N-rx-IHp"/>
+                                </constraints>
+                                <state key="normal" image="Record"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMV-aU-X8G" userLabel="Stop Button">
+                                <rect key="frame" x="159.5" y="453" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GMV-aU-X8G" secondAttribute="height" multiplier="1:1" id="2ZM-f8-Shf"/>
+                                    <constraint firstAttribute="height" constant="60" id="A7c-tA-A2Q"/>
+                                    <constraint firstAttribute="width" constant="60" id="Ju1-mb-cgq"/>
+                                </constraints>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <segue destination="fLz-8a-smo" kind="show" id="I31-Yp-ESs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.25704812634092478" green="0.3877202679158756" blue="0.44502914507772018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NV9-rD-W2K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="4ke-0q-4Uz"/>
-                            <constraint firstItem="adb-Tb-d0V" firstAttribute="centerX" secondItem="h3p-Ie-Buc" secondAttribute="centerX" id="IuU-TK-fxC"/>
-                            <constraint firstItem="adb-Tb-d0V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="XX0-CS-tL3"/>
-                            <constraint firstItem="h3p-Ie-Buc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="YU5-pz-vFp"/>
-                            <constraint firstItem="h3p-Ie-Buc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="b0o-Wc-dse"/>
+                            <constraint firstItem="NV9-rD-W2K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="4ke-0q-4Uz"/>
+                            <constraint firstItem="adb-Tb-d0V" firstAttribute="centerX" secondItem="h3p-Ie-Buc" secondAttribute="centerX" constant="-1" id="IuU-TK-fxC"/>
+                            <constraint firstItem="GMV-aU-X8G" firstAttribute="centerX" secondItem="h3p-Ie-Buc" secondAttribute="centerX" constant="1" id="VSL-Au-lyx"/>
+                            <constraint firstItem="adb-Tb-d0V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="XX0-CS-tL3"/>
+                            <constraint firstItem="h3p-Ie-Buc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="11" id="YU5-pz-vFp"/>
+                            <constraint firstItem="h3p-Ie-Buc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="1" id="b0o-Wc-dse"/>
                             <constraint firstItem="adb-Tb-d0V" firstAttribute="top" secondItem="NV9-rD-W2K" secondAttribute="bottom" constant="16" id="bl7-bq-Zrr"/>
                             <constraint firstItem="NV9-rD-W2K" firstAttribute="centerX" secondItem="adb-Tb-d0V" secondAttribute="centerX" constant="0.5" id="kD2-Qw-f6x"/>
+                            <constraint firstItem="GMV-aU-X8G" firstAttribute="top" secondItem="h3p-Ie-Buc" secondAttribute="bottom" constant="-1" id="wz4-MK-zEr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OV4-or-TEC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="33.733133433283363"/>
+            <point key="canvasLocation" x="976.79999999999995" y="33.733133433283363"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0hZ-vT-iag">
+            <objects>
+                <viewController id="fLz-8a-smo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bhN-oT-OIp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.25704812630000001" green="0.38772026790000003" blue="0.44502914510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="i8M-S1-XJD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8T-lQ-aVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="33.733133433283363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wDP-Sh-pd6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FHk-p9-32b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i43-dO-K6X">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Cl-kR-HcY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xai-kc-biR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="34"/>
         </scene>
     </scenes>
     <resources>
         <image name="Record" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
     </resources>
 </document>
