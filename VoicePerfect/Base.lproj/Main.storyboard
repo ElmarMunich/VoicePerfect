@@ -45,6 +45,9 @@
                                     <constraint firstAttribute="width" secondItem="h3p-Ie-Buc" secondAttribute="height" multiplier="1:1" id="f0N-rx-IHp"/>
                                 </constraints>
                                 <state key="normal" image="Record"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fq8-15-enw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMV-aU-X8G" userLabel="Stop Button">
                                 <rect key="frame" x="159.5" y="453" width="60" height="60"/>
@@ -55,7 +58,7 @@
                                 </constraints>
                                 <state key="normal" image="Stop"/>
                                 <connections>
-                                    <segue destination="fLz-8a-smo" kind="show" id="I31-Yp-ESs"/>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F2b-ir-8dc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,15 +77,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="OV4-or-TEC"/>
+                    <connections>
+                        <outlet property="recordButton" destination="h3p-Ie-Buc" id="t7N-RA-fa0"/>
+                        <outlet property="recordingLabel" destination="adb-Tb-d0V" id="KBm-gq-BMW"/>
+                        <outlet property="stopRecordingButton" destination="GMV-aU-X8G" id="Aua-Ky-0eD"/>
+                        <segue destination="fLz-8a-smo" kind="show" identifier="stopRecording" id="Bxw-oa-fGR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="976.79999999999995" y="33.733133433283363"/>
         </scene>
-        <!--View Controller-->
+        <!--Play View Controller-->
         <scene sceneID="0hZ-vT-iag">
             <objects>
-                <viewController id="fLz-8a-smo" sceneMemberID="viewController">
+                <viewController id="fLz-8a-smo" customClass="PlayViewController" customModule="VoicePerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bhN-oT-OIp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
