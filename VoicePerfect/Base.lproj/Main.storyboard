@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VoicePerfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3p-Ie-Buc" userLabel="Record Button">
+                                <rect key="frame" x="110" y="266" width="155" height="155"/>
+                                <state key="normal" image="Record"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to start recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adb-Tb-d0V">
+                                <rect key="frame" x="105" y="90" width="165" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="adb-Tb-d0V" secondAttribute="height" multiplier="55:7" id="8si-Nq-bsz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Perfect" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NV9-rD-W2K">
+                                <rect key="frame" x="105" y="43" width="166" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NV9-rD-W2K" secondAttribute="height" multiplier="129:26" constant="12.192307692307679" id="48S-MO-5e6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25704812634092478" green="0.3877202679158756" blue="0.44502914507772018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NV9-rD-W2K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="4ke-0q-4Uz"/>
+                            <constraint firstItem="adb-Tb-d0V" firstAttribute="centerX" secondItem="h3p-Ie-Buc" secondAttribute="centerX" id="IuU-TK-fxC"/>
+                            <constraint firstItem="adb-Tb-d0V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="XX0-CS-tL3"/>
+                            <constraint firstItem="h3p-Ie-Buc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="YU5-pz-vFp"/>
+                            <constraint firstItem="h3p-Ie-Buc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="b0o-Wc-dse"/>
+                            <constraint firstItem="adb-Tb-d0V" firstAttribute="top" secondItem="NV9-rD-W2K" secondAttribute="bottom" constant="16" id="bl7-bq-Zrr"/>
+                            <constraint firstItem="NV9-rD-W2K" firstAttribute="centerX" secondItem="adb-Tb-d0V" secondAttribute="centerX" constant="0.5" id="kD2-Qw-f6x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Record" width="155" height="155"/>
+    </resources>
+</document>
