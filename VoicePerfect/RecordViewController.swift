@@ -64,13 +64,14 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        // checks if the recording was successful, if true segue is performed otherwise a message is sent to the console
         if flag {
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
             print("recording failed!")
         }
    
-        // override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // after finishing recording the path of the audio file is sent to the segue "stopRecording" 9.14
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "stopRecording" {
                 let playSoundsVC = segue.destination as! PlayViewController

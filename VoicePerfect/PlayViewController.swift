@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class PlayViewController: UIViewController {
+    // variable for receiving audio from the RecordViewController
     var recordedAudioURL: URL!
 
     override func viewDidLoad() {
