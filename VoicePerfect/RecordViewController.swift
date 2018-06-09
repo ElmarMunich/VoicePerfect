@@ -79,7 +79,6 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
                 playSoundsVC.recordedAudioURL = recordedAudioURL
             }
         }
-
     }
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		444EBB1120CBF2C3004AE486 /* PlaySoundsViewcontroller-Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444EBB1020CBF2C3004AE486 /* PlaySoundsViewcontroller-Audio.swift */; };
 		44BB3C7420C99EDD007A974D /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BB3C7320C99EDD007A974D /* PlayViewController.swift */; };
 		44DE071F20C9268800537260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DE071E20C9268800537260 /* AppDelegate.swift */; };
 		44DE072120C9268800537260 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DE072020C9268800537260 /* RecordViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		444EBB1020CBF2C3004AE486 /* PlaySoundsViewcontroller-Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewcontroller-Audio.swift"; sourceTree = "<group>"; };
 		44BB3C7320C99EDD007A974D /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		44DE071B20C9268800537260 /* VoicePerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoicePerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DE071E20C9268800537260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				44DE072720C9268900537260 /* LaunchScreen.storyboard */,
 				44DE072A20C9268900537260 /* Info.plist */,
 				44BB3C7320C99EDD007A974D /* PlayViewController.swift */,
+				444EBB1020CBF2C3004AE486 /* PlaySoundsViewcontroller-Audio.swift */,
 			);
 			path = VoicePerfect;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				44DE072120C9268800537260 /* RecordViewController.swift in Sources */,
 				44BB3C7420C99EDD007A974D /* PlayViewController.swift in Sources */,
 				44DE071F20C9268800537260 /* AppDelegate.swift in Sources */,
+				444EBB1120CBF2C3004AE486 /* PlaySoundsViewcontroller-Audio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
