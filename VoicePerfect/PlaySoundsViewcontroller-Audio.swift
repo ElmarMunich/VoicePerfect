@@ -148,11 +148,9 @@ extension PlayViewController: AVAudioPlayerDelegate {
         case .playing:
             setPlayButtonsEnabled(false)
             pauseButton.isEnabled = true
-            recordNewSoundButton.isEnabled = true
         case .notPlaying:
             setPlayButtonsEnabled(true)
             pauseButton.isEnabled = false
-            recordNewSoundButton.isEnabled = false
         }
     }
     
