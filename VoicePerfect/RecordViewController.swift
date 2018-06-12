@@ -70,9 +70,9 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         } else {
             print("recording failed!")
         }
-   
+    }
         // after finishing recording the path of the audio file is sent to the segue "stopRecording" 9.14
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "stopRecording" {
                 let playSoundsVC = segue.destination as! PlayViewController
                 let recordedAudioURL = sender as! URL
@@ -81,5 +81,5 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-}
+
 
