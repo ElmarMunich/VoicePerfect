@@ -14,13 +14,13 @@ class PlayViewController: UIViewController {
    
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var rabbitButton: UIButton!
-    
     @IBOutlet weak var chipmunkButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var darkVaderButton: UIButton!
     @IBOutlet weak var parrotButton: UIButton!
     @IBOutlet weak var reverbButton: UIButton!
-    @IBOutlet weak var recordNewSoundButton: UIButton!
+    
+
     
     // variable for receiving audio from the RecordViewController
     var recordedAudioURL: URL!
@@ -55,10 +55,23 @@ class PlayViewController: UIViewController {
         stopAudio()
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
+        snailButton.contentMode = .center
+        snailButton.imageView?.contentMode = .scaleAspectFit
+        rabbitButton.contentMode = .center
+        rabbitButton.imageView?.contentMode = .scaleAspectFit
+        chipmunkButton.contentMode = .center
+        chipmunkButton.imageView?.contentMode = .scaleAspectFit
+        pauseButton.contentMode = .center
+        pauseButton.imageView?.contentMode = .scaleAspectFit
+        darkVaderButton.contentMode = .center
+        darkVaderButton.imageView?.contentMode = .scaleAspectFit
+        parrotButton.contentMode = .center
+        parrotButton.imageView?.contentMode = .scaleAspectFit
+        reverbButton.contentMode = .center
+        reverbButton.imageView?.contentMode = .scaleAspectFit
     }
 
     override func viewWillAppear(_ animated: Bool) {
