@@ -55,9 +55,6 @@ class PlayViewController: UIViewController {
         stopAudio()
     }
     
-    @IBAction func RecordNewSoundButton(_ sender: Any) {
-        stopAudio()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
