@@ -27,12 +27,16 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+  // Configures the state of the buttons for recording/stop recording and changes the text of the label
+    func configureButtons(_ isRecording: Bool, recordingLabelText: String){
+        recordButton.isEnabled = !isRecording;
+        stopRecordingButton.isEnabled = isRecording;
+        recordingLabel.text = recordingLabelText
+        }
+    
     @IBAction func recordAudio(_ sender: Any) {
-        recordingLabel.text = "Recording in Progress!"
-        stopRecordingButton.isEnabled = true
-        recordButton.isEnabled = false
-        
+        configureButtons(true, recordingLabelText: "Recording in Progress!")
+       
         // place to store audio in the documents directory
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         // recording name
@@ -54,9 +58,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecording(_ sender: Any) {
-        recordButton.isEnabled = true
-        stopRecordingButton.isEnabled = false
-        recordingLabel.text = "Tap to start recording"
+        configureButtons(false, recordingLabelText: "Tap to start recording")
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
